@@ -1,0 +1,333 @@
+/* 
+   SIMPLIFIED CSS STYLESHEET
+   This version uses standard CSS techniques and avoids complex variables or advanced animations.
+*/
+
+/* 1. GENERAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Standard font */
+  background-color: #faf8f5;
+  color: #111111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 2. NAVIGATION */
+.navbar {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #c04828;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  color: #c04828;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-social a {
+  color: #666666;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* 3. HERO SECTION */
+.hero {
+  background-color: #1e1e1e;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/6244bc1489f5d95526ce2e07/b008f5d4-652f-4034-b422-4b54544e9954/Website+Background+copy.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative; /* Brings text above the overlay */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  color: #c04828;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+/* 4. BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.btn-primary {
+  background-color: #c04828;
+  color: #ffffff;
+}
+
+.btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-dark {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* 5. SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-label {
+  color: #c04828;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: #666666;
+  margin-bottom: 40px;
+}
+
+/* 6. CARDS GRID */
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  width: 300px;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img {
+  background-color: #2b2b2b;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-name {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.card-price {
+  color: #c04828;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 7. PROMO BANNER */
+.promo-banner {
+  background-color: #c04828;
+  color: #ffffff;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.promo-text {
+  text-align: left;
+  max-width: 500px;
+}
+
+/* 8. INFO STRIP */
+.info-strip {
+  background-color: #1e1e1e;
+  color: #aaaaaa;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  max-width: 250px;
+  text-align: left;
+}
+
+.info-icon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.info-label {
+  color: #c04828;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* 9. FOOTER */
+.footer {
+  background-color: #111111;
+  color: #666666;
+  padding: 60px 40px 20px;
+  border-top: 3px solid #c04828;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  max-width: 300px;
+  text-align: left;
+}
+
+.footer-brand .nav-logo {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-heading {
+  color: #c04828;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222222;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* 10. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .nav-links {
+    margin-top: 15px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .promo-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-text {
+    text-align: center;
+  }
+}
