@@ -5,35 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu — St. James Burger &amp; Chip Co.</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style/styles.css" />
-
-    <!-- Internal CSS -->
-    <style>
-      /* Extra padding under the tab bar on menu page */
-      .menu-content {
-        padding: 48px 40px;
-      }
-
-      /* Highlight the currently active tab with underline animation */
-      .tab-btn.active::after {
-        content: "";
-        display: block;
-        height: 2px;
-        background: var(--white);
-        margin-top: 4px;
-        border-radius: 2px;
-      }
-
-      @media (max-width: 768px) {
-        .menu-content {
-          padding: 32px 20px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <!-- NAVIGATION -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">St. James <span>Burger</span></a>
 
@@ -65,20 +39,13 @@
       </div>
     </nav>
 
-    <!-- MENU HEADER -->
     <header class="menu-header">
-      <p class="section-label" style="color: var(--red)">
-        St. James Burger &amp; Chip Co.
-      </p>
-      <h1 class="section-title light">Our Menu</h1>
-      <p style="font-size: 16px; color: #888; margin-top: 8px">
-        Made fresh to order. Every time.
-      </p>
+      <p class="section-label">St. James Burger &amp; Chip Co.</p>
+      <h1 class="section-title">Our Menu</h1>
+      <p class="menu-header-sub">Made fresh to order. Every time.</p>
     </header>
 
-    <!-- MENU CONTENT -->
     <main class="menu-content">
-      <!-- Category tabs -->
       <div class="tab-bar" role="tablist" aria-label="Menu categories">
         <button
           class="tab-btn active"
@@ -103,7 +70,6 @@
         </button>
       </div>
 
-      <!-- Burgers -->
       <div id="cat-burgers" class="menu-category active" role="tabpanel">
         <div class="menu-grid">
           <article class="menu-item">
@@ -150,19 +116,14 @@
             </div>
           </article>
 
-          <article class="menu-item">
+          <article class="menu-item showcase-item">
             <div class="menu-item-emoji" aria-hidden="true">🏆</div>
             <div class="menu-item-info">
               <h2 class="menu-item-name">The Fat-Boy</h2>
               <p class="menu-item-desc">
                 The full challenge burger — loaded with everything.
               </p>
-              <!-- Inline style to call attention to the challenge item specifically -->
-              <span
-                class="menu-item-price"
-                style="color: var(--red); font-size: 17px"
-                >$18.99</span
-              >
+              <span class="menu-item-price highlight">$18.99</span>
             </div>
           </article>
 
@@ -179,7 +140,6 @@
         </div>
       </div>
 
-      <!-- Sides -->
       <div id="cat-sides" class="menu-category" role="tabpanel">
         <div class="menu-grid">
           <article class="menu-item">
@@ -228,7 +188,6 @@
         </div>
       </div>
 
-      <!-- Drinks -->
       <div id="cat-drinks" class="menu-category" role="tabpanel">
         <div class="menu-grid">
           <article class="menu-item">
@@ -254,7 +213,7 @@
           </article>
 
           <article class="menu-item">
-            <div class="menu-item-emoji" aria-hidden="true">💧</div>
+            <div class="menu-item-emoji" aria-hidden="true">&#128167;</div>
             <div class="menu-item-info">
               <h2 class="menu-item-name">Water</h2>
               <p class="menu-item-desc">Bottled water.</p>
@@ -264,11 +223,8 @@
         </div>
       </div>
 
-      <!-- Order online CTA -->
-      <div style="text-align: center; margin-top: 48px">
-        <p style="color: var(--mid-grey); margin-bottom: 16px; font-size: 15px">
-          Ready to order? We offer delivery and pickup.
-        </p>
+      <div class="menu-cta">
+        <p>Ready to order? We offer delivery and pickup.</p>
         <a
           href="https://order.online/store/st-james-burger-chip-co-ness-ave-341763"
           target="_blank"
@@ -278,7 +234,6 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">
@@ -287,47 +242,21 @@
             Winnipeg's favourite burger joint, serving fresh, bold flavours
             right in St. James.
           </p>
-          <div class="footer-social">
-            <a
-              href="http://www.instagram.com/stjamesburger"
-              target="_blank"
-              aria-label="Instagram"
-              >&#128247;</a
-            >
-            <a
-              href="http://facebook.com/stjamesburger"
-              target="_blank"
-              aria-label="Facebook"
-              >&#128241;</a
-            >
-            <a
-              href="http://tiktok.com/stjamesburger"
-              target="_blank"
-              aria-label="TikTok"
-              >&#127909;</a
-            >
-          </div>
         </div>
         <div>
           <p class="footer-heading">Quick Links</p>
           <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="challenge.html">Fat-Boy Challenge</a>
-            <a
-              href="https://order.online/store/st-james-burger-chip-co-ness-ave-341763"
-              target="_blank"
-              >Order Online</a
-            >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="challenge.html">Fat-Boy Challenge</a></li>
           </nav>
         </div>
         <div>
           <p class="footer-heading">Contact</p>
-          <p class="footer-info">
+          <p style="color: #666666; font-size: 14px">
             1866 Ness Ave.<br />
             Winnipeg, MB R3J 0Y6<br /><br />
-            (204) 414-5599<br />
-            contact@stjamesburger.com
+            (204) 414-5599
           </p>
         </div>
       </div>
@@ -337,9 +266,7 @@
       </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
-      // showCategory() — hides all menu categories then shows the selected one
       function showCategory(categoryId, clickedBtn) {
         // hide all panels
         const allCategories = document.querySelectorAll(".menu-category");
