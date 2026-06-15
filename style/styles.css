@@ -24,7 +24,7 @@ ul {
 }
 
 /* ==========================================================================
-   2. NAVIGATION
+  2. NAVIGATION
    ========================================================================== */
 .navbar {
   background-color: #111111;
@@ -67,7 +67,7 @@ ul {
 }
 
 .nav-social a {
-  color: #666666;
+  color: #ffffff;
   margin-left: 10px;
   font-size: 14px;
 }
@@ -335,7 +335,7 @@ section {
 }
 
 /* ==========================================================================
-  10. FAST-FOOD MENU LAYOUT (MENU PAGE SPECIFIC)
+   10. FAST-FOOD MENU LAYOUT (SCROLLABLE SECTIONS)
    ========================================================================== */
 .menu-header {
   background-color: #111111;
@@ -352,60 +352,35 @@ section {
 }
 
 .menu-content {
-  padding: 48px 40px;
+  padding: 20px 20px 48px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Dynamic Tab Switcher Bar */
-.tab-bar {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
+/* Individual Category Section blocks */
+.menu-section {
+  padding: 40px 0 20px;
+  text-align: left; /* Overrides the main index section alignments */
 }
 
-.tab-btn {
-  background-color: #ffffff;
-  color: #111111;
-  border: 2px solid #dddddd;
-  padding: 10px 24px;
-  font-size: 14px;
+.menu-section-heading {
+  font-size: 28px;
   font-weight: bold;
+  color: #111111;
+  border-bottom: 2px solid #c04828;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.tab-btn:hover {
-  border-color: #c04828;
-  color: #c04828;
-}
-
-.tab-btn.active {
-  background-color: #c04828;
-  color: #ffffff;
-  border-color: #c04828;
-}
-
-/* Display mechanics for tab toggling */
-.menu-category {
-  display: none;
-}
-
-.menu-category.active {
-  display: block;
-}
-
-/* Responsive Two-Column Board Setup */
+/* Responsive Grid Configuration (2 columns on computers) */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 24px;
 }
 
-/* Wide Diner-Style Rows */
+/* Wide Diner-Style Board Rows */
 .menu-item {
   background-color: #ffffff;
   border: 1px solid #dddddd;
@@ -434,7 +409,7 @@ section {
 
 .menu-item-info {
   flex-grow: 1;
-  padding-right: 75px; /* Ensures text never spills into price layout */
+  padding-right: 75px; /* Keeps text away from absolute price line */
 }
 
 .menu-item-name {
@@ -450,7 +425,7 @@ section {
   line-height: 1.4;
 }
 
-/* Fast Food Overhead Pricing Position */
+/* Price placement layout */
 .menu-item-price {
   font-size: 18px;
   font-weight: bold;
@@ -460,7 +435,7 @@ section {
   top: 20px;
 }
 
-/* Special Highlighting Styles (e.g., Fat-Boy Challenge Item) */
+/* Special Highlight Styling (e.g., Fat-Boy Challenge Item) */
 .showcase-item {
   border: 2px dashed #c04828;
   background-color: #fffdfb;
@@ -473,7 +448,7 @@ section {
 
 .menu-cta {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 60px;
 }
 
 .menu-cta p {
@@ -483,7 +458,7 @@ section {
 }
 
 /* ==========================================================================
-   11. MOBILE & RESPONSIVE LAYOUT adjustments
+   11. MOBILE & RESPONSIVE LAYOUT ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 768px) {
   .navbar {
@@ -508,28 +483,59 @@ section {
     flex-direction: column;
   }
 
-  /* Menu Page Mobile Fixes */
+  /* Menu Page Mobile adjustments */
   .menu-content {
-    padding: 32px 20px;
+    padding: 10px 10px 40px;
   }
 
-  .tab-bar {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .tab-btn {
-    flex: 1 1 28%;
-    padding: 8px 12px;
-    font-size: 12px;
-    text-align: center;
+  .menu-section-heading {
+    font-size: 22px;
   }
 
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack into 1 clean column on mobile screens */
   }
 
   .menu-item {
     padding: 16px;
   }
 }
+
+/* 12. ANIMATIONS & TRANSITIONS (FOR RUBRIC REQUIREMENTS) */
+
+/* Smooth Fade-In Up Animation for Page Elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts 20px lower down */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Moves up to its natural position */
+  }
+}
+
+/* Class to trigger the animation */
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth transition for all standard hover states across the site */
+.nav-links a,
+.btn,
+.tab-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.squarespace-cdn.com/content/v1/6244bc1489f5d95526ce2e07/b008f5d4-652f-4034-b422-4b54544e9954/Website+Background+copy.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+/* Replaces the emoji window with a clean, cropped photo container */
