@@ -179,7 +179,7 @@ section {
 }
 
 /* ==========================================================================
-   6. CARDS (INDEX FEATURED ITEMS)
+  6. CARDS (INDEX FEATURED ITEMS)
    ========================================================================== */
 .cards-grid {
   display: flex;
@@ -228,26 +228,7 @@ section {
 }
 
 /* ==========================================================================
-   7. PROMO
-   ========================================================================== */
-.promo-banner {
-  background-color: #c04828;
-  color: #ffffff;
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.promo-text {
-  max-width: 500px;
-  text-align: left;
-}
-
-/* ==========================================================================
-   8. INFO STRIP
+  7. INFO STRIP
    ========================================================================== */
 .info-strip {
   background-color: #1e1e1e;
@@ -279,7 +260,7 @@ section {
 }
 
 /* ==========================================================================
-   9. FOOTER
+   8. FOOTER
    ========================================================================== */
 .footer {
   background-color: #111111;
@@ -335,7 +316,7 @@ section {
 }
 
 /* ==========================================================================
-   10. FAST-FOOD MENU LAYOUT (SCROLLABLE SECTIONS)
+   9. FAST-FOOD MENU LAYOUT (SCROLLABLE SECTIONS)
    ========================================================================== */
 .menu-header {
   background-color: #111111;
@@ -458,7 +439,7 @@ section {
 }
 
 /* ==========================================================================
-   11. MOBILE & RESPONSIVE LAYOUT ADJUSTMENTS
+   10. MOBILE & RESPONSIVE LAYOUT ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 768px) {
   .navbar {
@@ -472,15 +453,6 @@ section {
 
   .hero h1 {
     font-size: 32px;
-  }
-
-  .promo-banner,
-  .promo-text {
-    text-align: center;
-  }
-
-  .promo-banner {
-    flex-direction: column;
   }
 
   /* Menu Page Mobile adjustments */
@@ -501,7 +473,7 @@ section {
   }
 }
 
-/* 12. ANIMATIONS & TRANSITIONS (FOR RUBRIC REQUIREMENTS) */
+/* 11. ANIMATIONS & TRANSITIONS (FOR RUBRIC REQUIREMENTS) */
 
 /* Smooth Fade-In Up Animation for Page Elements */
 @keyframes fadeInUp {
